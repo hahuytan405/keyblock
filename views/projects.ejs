@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/reponssive.css">
+    <link rel="stylesheet" href="/fonts/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="icon" type="image/png" href="/img/Logo.png">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <div class="background__wrap">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="/img/Logo.png" alt="">
+                        KEY BLOCK
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div id="services" class="services services-admin">
+            <div class="container">
+                <p class="admin__title">Admin Projects</p>
+                <div class="tab-pane-admin">
+                    <a class="add-admin" href="/add-project">+ Add Project</a>
+                    <% if (projs.length > 0) { %>
+                        <table class="table-admin">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Title</th>
+                                    <th>Image</th>
+                                    <th>Description</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (let project of projs) { %>
+                                    <tr>
+                                        <th><%= project.name %></th>
+                                        <th><%= project.title %></th>
+                                        <th><img class="admin-img" src="https://lh3.googleusercontent.com/u/0/d/<%= project.imageUrl %>" alt="<%= project.name %>" /></th>
+                                        <th><%= project.description %></th>
+                                        <td>
+                                            <a class="ti-pencil-alt" href="/edit-project/<%= project._id %>?edit=true"></a>
+                                        </td>
+                                        <td>
+                                            <form class="form-delete" action="/delete-project" method="POST">
+                                                <input type="hidden" value="<%= project._id %>" name="projectId">
+                                                <button class="btn" type="submit"><i class="ti-trash"></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                <% } %>
+                        </table>
+                    <% } else { %>
+                        <h1 style="color: #fff;">No projects Found!</h1>
+                    <% } %>
+                </div>
+                <div class="pagination">
+                    <ul>
+                    <% if (hasPreviousPage) { %>
+                        <li><a href="/projects/?page=<%= previousPage %>"><i class="ti-angle-left"></i></a></li>
+                    <% } %>
+                    <% if (currentPage !== 1 && previousPage !== 1) { %>
+                        <li><a href="/projects/?page=1">1</a></li>
+                    <% } %>
+                    <% if ((previousPage - 1)  > 1) { %>
+                        <li>...</li>
+                    <% } %>
+                    <% if (hasPreviousPage) { %>
+                        <li><a href="/projects/?page=<%= previousPage %>" ><%= previousPage %></a></li>
+                    <% } %>
+                    <li><a href="/projects/?page=<%= currentPage %>" class="page-active"><%= currentPage %></a></li>
+                    <% if (hasNextPage) { %>
+                        <li><a href="/projects/?page=<%= nextPage %>" ><%= nextPage %></a></li>
+                    <% } %>
+                    <% if ((nextPage + 1) < lastPage) { %>
+                        <li>. . .</li>
+                    <% } %>
+                    <% if (lastPage !== currentPage && nextPage !== lastPage) { %>
+                        <li><a href="/projects/?page=<%= lastPage %>" ><%= lastPage %></a></li>
+                    <% } %>
+                    <% if (hasNextPage) { %>
+                        <li><a href="/projects/?page=<%= nextPage %>"><i class="ti-angle-right"></i></a></li>
+                    <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

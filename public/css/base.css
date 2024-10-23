@@ -1,0 +1,81 @@
+*{
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: #070017;
+}
+
+
+.container {
+    max-width: 1124px;
+    margin: 0 auto;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    animation: opacity 0.75s ease-in-out ;
+}
+
+.has-fade {
+    visibility: hidden;
+}
+
+@-webkit-keyframes fade-out {
+    from {
+      visibility: visible;
+      opacity: 1;
+    }
+    99% {
+      visibility: visible;
+      opacity: 0;
+    }
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+}
+
+.fade-out {
+    -webkit-animation: fade-out 0.75s ease-in-out forwards;
+            animation: fade-out 0.75s ease-in-out forwards;
+  }
+
+@keyframes fade-in {
+    from {
+      visibility: hidden;
+      opacity: 0;
+    }
+    1% {
+      visibility: visible;
+      opacity: 0;
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+.fade-in {
+    -webkit-animation: fade-in 0.75s ease-in-out forwards;
+            animation: fade-in 0.75s ease-in-out forwards;
+}
+

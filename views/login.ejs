@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/reponssive.css">
+    <link rel="stylesheet" href="/fonts/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="icon" type="image/png" href="/img/Logo.png">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <div class="background__wrap">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="/img/Logo.png" alt="">
+                        KEY BLOCK
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="auth">
+            <form action="/login" method="POST">
+                <div class="admin-login">
+           
+                    
+                    <h2>Registered admin</h2>
+                    <p >Don't have an account? <a href="/signup"> Sign up here !</a></p>
+                    <% if (errorMessage) { %>
+                        <div class="message-error">
+                            <p><%= errorMessage %></p>
+                        </div>
+                    <% } %>
+                    <div>
+                        <div class="auth-input">
+                            <label for="email">E-Mail</label>
+                            <input 
+                                class="<%= validationErrors.find(e => e.path === 'email') ? 'invalid' : '' %>"
+                                type="email" 
+                                name="email" 
+                                id="email" 
+                                value="<%= oldInput.email %>"
+                                placeholder="Email here..." 
+                            >
+                        </div>
+                        <div class="auth-input">
+                            <label for="password">Password</label>
+                            <input 
+                                class="<%= validationErrors.find(e => e.path === 'password') ? 'invalid' : '' %>"
+                                type="password" 
+                                name="password" 
+                                id="password" 
+                                value="<%= oldInput.password %>"
+                                placeholder="Password" 
+                            >
+                        </div>
+                    </div>
+                    <p><a href="/reset-password" >Forget your password?</a></p>
+                    <button type="submit" class="submit-button">Login</button>	
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

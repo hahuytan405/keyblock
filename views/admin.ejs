@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/reponssive.css">
+    <link rel="stylesheet" href="/fonts/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="icon" type="image/png" href="/img/Logo.png">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <div class="background__wrap">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="/img/Logo.png" alt="">
+                        KEY BLOCK
+                    </a>
+                </div>
+                <div class="header__view">
+                    <div class="header__view__bg"></div>
+                    <span>
+                        <form action="/logout" method="post">
+                            <button class="admin-logout"type="submit">Logout</button>
+                        </form>
+                    </span>
+                    <svg class="header__view__img" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <g filter="url(#filter0_b_1457_647)">
+                        <path d="M11.2998 10.4931L11.2998 5.29307C11.2982 5.07938 11.2126 4.8749 11.0614 4.72389C10.9103 4.57288 10.7057 4.48748 10.4921 4.48618C10.2783 4.48748 10.0736 4.57302 9.9224 4.72424C9.77121 4.87547 9.6857 5.0802 9.68439 5.29406L9.68439 8.54546L1.37685 0.234127C1.22494 0.084115 1.02006 -4.49342e-07 0.806588 -4.58673e-07C0.593116 -4.68004e-07 0.388237 0.0841149 0.236327 0.234127C0.161349 0.308981 0.101866 0.397888 0.0612802 0.495762C0.0206947 0.593636 -0.000195534 0.698554 -0.000195538 0.804512C-0.000195543 0.910471 0.0206947 1.01539 0.0612802 1.11326C0.101866 1.21114 0.161349 1.30004 0.236327 1.3749L8.54486 9.68523L5.29417 9.68523C5.08009 9.68523 4.87477 9.7703 4.72339 9.92171C4.57201 10.0731 4.48696 10.2785 4.48696 10.4926C4.48696 10.7067 4.57201 10.9121 4.72339 11.0635C4.87477 11.2149 5.08009 11.3 5.29417 11.3L10.4921 11.3C10.7057 11.2987 10.9103 11.2133 11.0614 11.0623C11.2126 10.9113 11.2982 10.7068 11.2998 10.4931V10.4931Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_b_1457_647" x="-4.00024" y="-4" width="19.3" height="19.3" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1457_647"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1457_647" result="shape"/>
+                        </filter>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </header>
+        <p class="admin__title admin-manager">Admin</p>
+        <div class="auth admin-tab">
+            <a href="/projects" class="link-admin">List Project</a>
+            <a href="/reviews" class="link-admin">List Review</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

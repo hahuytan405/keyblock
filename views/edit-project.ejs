@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/reponssive.css">
+    <link rel="stylesheet" href="/fonts/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="icon" type="image/png" href="/img/Logo.png">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <div class="background__wrap">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="/img/Logo.png" alt="">
+                        KEY BLOCK
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="auth">
+            <form action="/<% if (editing) { %>edit-project<% } else { %>add-project<% } %>" method="POST" enctype="multipart/form-data">
+                <div class="admin-login">        
+                    <% if (editing) { %>
+                        <h2>Edit project</h2>
+                    <% } else { %>
+                        <h2>Add project</h2>
+                    <% } %>
+                    <% if (errorMessage) { %>
+                        <div class="message-error">
+                            <p><%= errorMessage %></p>
+                        </div>
+                    <% } %>
+                    <div>
+                        <div class="auth-input">
+                            <label for="name">Project</label>
+                            <input 
+                                class="<%= validationErrors.find(e => e.path === 'name') ? 'invalid' : '' %>"
+                                type="text" 
+                                name="name" 
+                                id="name" 
+                                value="<% if (editing || hasError) { %><%= project.name %><% } %>">
+                        </div>
+                        <div class="auth-input">
+                            <label for="title">Title</label>
+                            <input 
+                                class="<%= validationErrors.find(e => e.path === 'title') ? 'invalid' : '' %>"
+                                type="text" 
+                                name="title" 
+                                id="title" 
+                                value="<% if (editing || hasError) { %><%= project.title %><% } %>">
+                        </div>
+                        <div class="auth-input">
+                            <label for="img">Image</label>
+                            <input 
+                                type="file" 
+                                multiple="multiple"
+                                name="image" 
+                                id="image" >
+                        </div>
+                        <div class="auth-input">
+                            <label for="description">Description</label>
+                            <textarea 
+                                class="<%= validationErrors.find(e => e.path === 'description') ? 'invalid' : '' %>"
+                                name="description" 
+                                id="description" 
+                                rows="5"><% if (editing || hasError) { %><%= project.description %><% } %></textarea>		
+                        </div>
+                    </div>
+                    <% if (editing) { %>
+                        <input type="hidden" value="<%= project._id %>" name="projectId">
+                    <% } %>
+                    <button type="submit" class="submit-button"><% if (editing) { %>Update project<% } else { %>Add project<% } %></button>	
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

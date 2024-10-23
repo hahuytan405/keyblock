@@ -1,0 +1,631 @@
+/* Mobile */
+@media (max-width: 739px) {
+    .container {
+        max-width: 360px;
+    }
+
+    .banner__more__tab {
+        position: fixed;
+        width: 32rem;
+        height: 55rem;
+        background: linear-gradient(226.74deg, #2E2B40 0%, #131236 92.28%, #131236 92.28%);
+        border-radius: 16px;
+        z-index: 2;
+        padding: 2rem 1.4rem 2rem 2rem;
+    }
+
+    .team__more__tab__text {
+        padding-right: 1rem;
+    }
+
+    .team__more__tab__community {
+        margin: 1rem 0 0 0;
+    }
+
+    .team__more__tab__left-side img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .team__more__tab__right-side {
+        padding-left: 1rem;
+    }
+
+    .team__more__tab__community svg {
+        width: 3.4rem;
+    }
+
+    #header {
+        padding: 1rem 0;
+    }
+
+    #header .container {
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .banner__earth {
+        width: 50%;
+        right: 3rem;
+        top: 22rem;
+    }
+
+    .banner__title {
+        font-size: 3.4rem;
+        font-weight: 600;
+        line-height: 3.4rem;
+        margin-top: 13.2rem;
+    }
+
+    .banner__more {
+        margin-bottom: 8.6rem;
+    }
+
+    .banner__item {
+        height: 4.6rem;
+    }
+
+    .banner__item:not(.banner__item:last-child) {
+        padding-right: 1rem;
+    }
+
+    .banner__list__wrap {
+        width: 90%;
+        height: 6rem;
+    }
+
+    .banner__item span {
+        font-size: 1rem;
+    }
+    
+    .banner__item img {
+        height: 18px;
+    }
+
+    .banner__item p {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+
+    .services__tab__item {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .service__side > img {
+        width: 18rem;
+    }
+
+    .service-pane__title {
+        font-size: 1.6rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .service__side:last-child {
+      padding: 2rem 0;
+    }
+
+    .service-pane__text p {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+
+    #projects .slick-dots {
+        bottom: 60%;
+    }
+
+    .projects__list  {
+        width: 90%;
+    }
+
+    .projects__btn-prev {
+        display: none !important;
+    }
+    
+    .projects__btn-next {
+        display: none !important;
+    }
+
+    .projects__content__title {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .projects__content__text {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    .projects__content__about__text p {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .projects__content__about {
+        font-size: 1.2rem;
+        line-height: 3rem;
+        width: 5.6rem;
+    }
+
+    .ourproducts__list {
+        width: 100%;
+        grid-template-columns: 30% 30% 30%;
+        gap: 1.5rem;
+    }
+
+    .ourproducts__img {
+        height: 90px;
+    }
+
+    .ourproducts__img img {
+        width: 100%;
+    }
+
+    .ourproducts__content  {
+        padding: 1rem;
+    }
+
+    .ourproducts__content span {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: #fff;
+    }    
+
+    .ourproducts__more-text {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        max-height: 56px;
+    }
+
+    .ourproducts__img p {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+        background: rgba(12, 5, 28, 0.5);
+        margin: 0;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 2.4rem;
+        color: #fff;
+        padding: 0 1rem;
+        border-radius: 8px;
+    }
+
+    .reviews__list {
+        width: 95%;
+    }
+
+    .reviews__btn-prev {
+        display: none !important;
+    }
+    
+    .reviews__btn-next {
+        display: none !important;
+    }
+
+    .reviews__item__header span {
+        font-size: 1.3rem;
+        line-height: 1.4rem;
+        color: #fff;
+    }
+
+    .reviews__item__header p {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+
+    .reviews__item__text {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .reviews__item__rate svg {
+        width: 1.2rem;
+    }
+
+    .reviews__item__header img {
+        height: 3.8rem;
+    }
+
+    .reviews__item__header {
+        padding: 1rem;
+    }
+
+    .team__list {
+        width: 100%;
+        gap: 1.5rem;
+        grid-template-columns: 30% 30% 30%;
+    }
+
+    .team__more {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.7rem;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .team__item {
+        padding: 1rem;
+    }
+
+    .team__item img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #sub .container {
+        padding: 2rem 0 1.8rem 5rem;
+    }
+
+    .team__more__tab__name {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+    .team__more__tab__title p:last-child {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    #sub .container {
+        padding: 1rem;
+    }
+
+    .sub__title p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .sub__input {
+        margin: 0.6rem 0;
+    }
+
+    .sub__text {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    
+    #sub input {
+        height: 3rem;
+        width: 18.4rem;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .sub__input button {
+        width: 13rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .sub__community__item {
+        width: 2rem;
+        margin-right: 1rem;
+    }
+
+    .footer__header {
+        padding: 5rem 1rem;
+    }
+
+    .footer__infor {
+        width: 100% !important;
+    }
+
+    .footer__about {
+        display: none;
+    }
+
+    .footer__partner {
+        display: none;
+    }    
+
+    .footer__support {
+        display: none;
+    }
+
+    .footer__end .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__end .container span {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Mobile & tablet */
+@media (max-width: 1023px) { 
+    .banner__more {
+        margin-bottom: 8.6rem;
+    }
+
+    .services .container {
+        padding-top: 10rem;
+    }
+
+    #projects .container {
+        padding-top: 10rem;
+    }
+    
+    #ourpartner p {
+        margin: 10rem 0 6rem 0;    
+    }
+
+    .ourproducts__title {
+        margin: 10rem 0 0 0;
+    }
+    
+    .ourpartner img {
+        width: 150%;
+    }
+
+    .reviews__title {
+        margin: 10rem 0 5rem 0;
+    }
+
+    .team__title {
+        margin: 10rem 0 5rem 0;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .banner__more__tab  {
+        width: 74rem;
+    }
+    
+    .background__wrap {
+        background-size: cover; 
+        background-repeat: no-repeat;
+    }
+    
+    
+    .banner__earth {
+        width: 50%;
+        right: 5rem;
+        top: 5rem;
+    }
+
+    .header__logo a {
+        font-size: 2rem;
+    }
+
+    .header__view {
+        width: 0rem;
+    }
+
+    .banner__title {
+        font-size: 3.4rem;
+        font-weight: 600;
+        line-height: 3.4rem;
+        margin-top: 13.2rem;
+    }
+
+    .banner__item {
+        height: 6rem;
+    }
+
+    .banner__item:not(.banner__item:last-child) {
+        padding-right: 4rem;
+    }
+
+    .banner__list__wrap {
+        width: 90%;
+        height: 10rem;
+    }
+
+    .banner__item span {
+        font-size: 2rem;
+    }
+    
+    .banner__item img {
+        height: 24px;
+    }
+
+    .banner__item p {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+
+    .services__tab__item {
+        font-size: 1.4rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .service__side > img {
+        width: 34.2rem;
+    }
+
+    .service-pane__title {
+        font-size: 3rem;
+    }
+
+    .service-pane__text p {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+
+    #projects .slick-dots {
+        bottom: 36%;
+    }
+
+    .projects__list  {
+        width: 85%;
+    }
+
+    .projects__btn-prev {
+        left: -3rem;
+    }
+    
+    .projects__btn-next {
+        right: -3rem;
+    }
+
+    .projects__content__text {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    .projects__content__about__text p {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .ourproducts__list {
+        width: 100%;
+        grid-template-columns: 33% 33% 33%;
+        gap: 1.5rem;
+    }
+
+    .ourproducts__img {
+        height: 195px;
+    }
+
+    .ourproducts__img img {
+        width: 100%;
+    }
+
+    .ourproducts__content  {
+        padding: 1rem;
+    }
+
+    .ourproducts__content span {
+        font-weight: 700;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        color: #fff;
+    }    
+
+    .ourproducts__more-text {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        max-height: 56px;
+    }
+
+    .reviews__list {
+        width: 85%;
+    }
+
+    .reviews__btn-prev {
+        left: -3rem;
+    }
+    
+    .reviews__btn-next {
+        right: -3rem;
+    }
+
+    .reviews__item__header span {
+        font-size: 1.3rem;
+        line-height: 1.4rem;
+        color: #fff;
+    }
+
+    .reviews__item__header p {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+
+    .reviews__item__text {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .reviews__item__header {
+        padding: 1.6rem;
+    }
+
+    .team__list {
+        width: 100%;
+        gap: 1.5rem;
+        grid-template-columns: 23% 23% 23% 23%;
+    }
+
+    .team__item img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #sub .container {
+        padding: 2rem 0 1.8rem 5rem;
+    }
+
+    .team__more__tab__name {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+    .team__more__tab__title p:last-child {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .sub__title {
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .sub__text {
+        margin: 0.5rem 0;
+    }
+
+    #sub input {
+        height: 4rem;
+        width: 28.8rem;
+        font-size: 1.5rem;
+    }
+
+    .sub__input button {
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .sub__input {
+        margin: 1rem 0 ;
+    }
+
+    .sub__community__item {
+        width: 2.5rem;
+    }
+
+    .footer__end .container span  {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .footer__item span {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+
+    .footer__header a {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+}
+
+
+@media (min-width: 1023px) {
+    .team__more__tab  {
+        width: 84rem;
+    }
+}
